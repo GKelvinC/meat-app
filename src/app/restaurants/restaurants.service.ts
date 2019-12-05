@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+
 import { Restaurant } from "./restaurant/restaurant.model";
+import { MenuItem } from "../restaurant-detail/menu-item/menu-item.model"
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -30,5 +32,12 @@ export class RestaurantsService {
         return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
         .map(response => response.json())
         .catch(ErrorHandler.handleError)
+    }
+
+    menuOfRestaurant(id: string): Observable<MenuItem[]>{
+        return this.http.get(`${MEAT_API}/restaurants/${id}/menu`)
+        .map(response => response.json())
+        .catch(ErrorHandler.handleError)
+
     }
 }
