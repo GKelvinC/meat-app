@@ -433,6 +433,27 @@
         }
       ],
       "id": 3
+    },
+    {
+      "address": "Avenida das americas",
+      "number": "3",
+      "optional": "LT 08 QUADRA H",
+      "paymentOption": "DEB",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "donut"
+        },
+        {
+          "quantity": 8,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 6,
+          "menuId": "bread"
+        }
+      ],
+      "id": 4
     }
   ]
 }
