@@ -9,7 +9,6 @@ import 'rxjs/add/operator/catch';
 
 import { MEAT_API }from '../app.api';
 import { Observable } from 'rxjs/Observable';
-import { ErrorHandler} from '../app.error-handler';
 
 @Injectable()
 export class RestaurantsService {
