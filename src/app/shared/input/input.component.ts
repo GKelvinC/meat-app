@@ -1,5 +1,5 @@
-import { Component, OnInit, Input , ContentChild ,AfterContentInit} from '@angular/core';
-import { NgModel,FormControlName} from '@angular/forms'
+import { AfterContentInit, Component, ContentChild, Input, OnInit } from '@angular/core';
+import { FormControlName, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'mt-input-container',
@@ -14,8 +14,8 @@ export class InputComponent implements OnInit, AfterContentInit {
 
   input:any
 
-  @ContentChild(NgModel) model: NgModel
-  @ContentChild(FormControlName) control: FormControlName
+  @ContentChild(NgModel, { static: false }) model: NgModel
+  @ContentChild(FormControlName, { static: false }) control: FormControlName
 
   constructor() { }
 
